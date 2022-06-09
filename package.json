@@ -1,0 +1,27 @@
+{
+  "name": "jeraby-firebase",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --config vite.config.dev.ts",
+    "patchProd": "npm version patch",
+    "buildTest": "vite build --config vite.config.test.ts",
+    "buildProd": "vite build",
+    "deleteLoc": "node deleteLocFiles.js", 
+    "preview": "vite preview",
+    "tsc": "vue-tsc --noEmit",
+    "cert": "rm -rf .cert && mkdir -p .cert && mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem 'local.avast.com'"
+  },
+  "dependencies": {
+    "vue": "^3.2.29",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "@vitejs/plugin-vue": "^2.1.0",
+    "stylus": "^0.56.0",
+    "typescript": "^4.5.4",
+    "vite": "2.9.1",
+    "vite-plugin-eslint": "1.3.0",
+    "vue-tsc": "^0.30.5"
+  }
+}
