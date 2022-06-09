@@ -1,6 +1,8 @@
 <template>
   <div>{{ translate('h1.home') }}</div>
-  <router-link to="contact">Contact</router-link>
+  <router-link to="contact">
+    Contact
+  </router-link>
 </template>
 
 <script setup lang="ts">

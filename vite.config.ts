@@ -11,23 +11,23 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          // generate localizations files to separare dir
-          let packageName = ''
-          if (id.includes('localizations')) {
-            const matcher = new RegExp(`localizations/jeraby/.*`)
-            const match = id.match(matcher)
-            if (match && match[0]) {
-              // packageName = match[0].slice(match[0].indexOf('/')+1,-1)+'/'+
-              const splitted = match[0].split('/')
-              if (splitted.length === 5) {
-                packageName = 'localizations/'+splitted[1]+'/'+splitted[2]+'/'+splitted[1]
-                return packageName
-              }
-            }
+        // manualChunks: (id) => {
+        //   // generate localizations files to separare dir
+        //   let packageName = ''
+        //   if (id.includes('localizations')) {
+        //     const matcher = new RegExp(`localizations/jeraby/.*`)
+        //     const match = id.match(matcher)
+        //     if (match && match[0]) {
+        //       // packageName = match[0].slice(match[0].indexOf('/')+1,-1)+'/'+
+        //       const splitted = match[0].split('/')
+        //       if (splitted.length === 5) {
+        //         packageName = 'localizations/'+splitted[1]+'/'+splitted[2]+'/'+splitted[1]
+        //         return packageName
+        //       }
+        //     }
             
-          }
-        },
+        //   }
+        // },
         entryFileNames: 'jeraby.js',
         chunkFileNames: '[name].js',
         assetFileNames: (assetInfo) => {

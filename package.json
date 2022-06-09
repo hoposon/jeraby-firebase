@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite --config vite.config.dev.ts",
+    "buildProd": "vite build",
+    "lint": "eslint --fix --ext .js,ts,vue --ignore-path .gitignore .",
     "patchProd": "npm version patch",
     "buildTest": "vite build --config vite.config.test.ts",
-    "buildProd": "vite build",
     "deleteLoc": "node deleteLocFiles.js", 
     "preview": "vite preview",
     "tsc": "vue-tsc --noEmit",
