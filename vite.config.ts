@@ -31,7 +31,7 @@ export default defineConfig({
         entryFileNames: 'jeraby.js',
         chunkFileNames: '[name].js',
         assetFileNames: (assetInfo) => {
-          // rename main css to subscriptions.css
+          // rename main css to jeraby.css
           if (assetInfo.name === 'index.css') return 'jeraby.css'
           else return assetInfo.name
         }

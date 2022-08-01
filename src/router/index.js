@@ -1,15 +1,15 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
-// import { products, generateRoutesFromProdCat, generateRoutesFromProducts } from '../config/products';
+import { products, generateRoutesFromProdCat, generateRoutesFromProducts } from '../data/products'
 
 let routes = [
 	{
 		path: '/',
 		component: Home,
-		// props: {
-		// 	products
-		// }
+		props: {
+			products
+		}
 	}, {
 		path: '/about',
 		// route level code-splitting
@@ -31,11 +31,11 @@ let routes = [
 	}
 ]
 
-// routes = [
-// 	...routes,
-// 	...generateRoutesFromProdCat(),
-// 	...generateRoutesFromProducts()
-// ]
+routes = [
+	...routes,
+	...generateRoutesFromProdCat(),
+	...generateRoutesFromProducts()
+]
 
 // console.log('routes >>> ', routes)
 
